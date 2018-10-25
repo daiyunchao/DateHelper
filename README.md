@@ -26,103 +26,103 @@ mocha Test.js
   * 
   * 
   * 通过时间戳获取yyyy-MM-dd HH:mm:ss格式的日期:
-  * getDateByTimeStamp(timeStamp)
+  * **getDateByTimeStamp**(timeStamp)
   * 
   * 通过时间戳获取yyyy年MM月dd HH:mm:ss格式的日期:
-  * getCNDateByTimeStamp(timeStamp)
+  * **getCNDateByTimeStamp**(timeStamp)
   * 
   * 扩展通过时间戳转换成日期格式函数,可通过参数自定义日期格式:
-  * buildDateBySplitSign({timeStamp,yearSign = "-",monthSign = "-",daySign = " ",hourSign = ":",minuteSign = ":",secondSign = ""})
+  * **buildDateBySplitSign**({timeStamp,yearSign = "-",monthSign = "-",daySign = " ",hourSign = ":",minuteSign = ":",secondSign = ""})
   * 
   * 通过时间戳获取日期yyyy-MM-dd(不包含时间): 
-  * getDateByTimeStampEndWithDay(timeStamp)
+  * **getDateByTimeStampEndWithDay**(timeStamp)
   * 
   * 通过时间戳获取日期yyyy年MM月dd(不包含时间): 
-  * getCNDateByTimeStampEndWithDay(timeStamp)
+  * **getCNDateByTimeStampEndWithDay**(timeStamp)
   * 
   * 通过时间戳获取日期yyyy-MM(不包含时间):
-  * getDateByTimeStampEndWithMonth(timeStamp)
+  * **getDateByTimeStampEndWithMonth**(timeStamp)
   * 
   * 通过时间戳获取日期yyyy月MM(不包含时间):
-  * getCNDateByTimeStampEndWithMonth(timeStamp)
+  * **getCNDateByTimeStampEndWithMonth**(timeStamp)
   * 
   * 获取今日的最小时间戳:
-  * getTodayMinTimeStamp()
+  * **getTodayMinTimeStamp**()
   * 
   * 获取今日的最大时间戳:
-  * getTodayMaxTimeStamp()
+  * **getTodayMaxTimeStamp**()
   * 
   * 获取昨日的最小时间戳:
-  * getYesterdayMinTimeStamp()
+  * **getYesterdayMinTimeStamp**()
   * 
   * 获取昨日的最大时间戳:
-  * getYesterdayMaxTimeStamp()
+  * **getYesterdayMaxTimeStamp**()
   * 
   * 通过一个时间戳获取该时间戳对应的日期最小时间戳:
-  * getMinTimeStampByTimeStamp(timeStamp)
+  * **getMinTimeStampByTimeStamp**(timeStamp)
   * 
   * 通过一个时间戳获取该时间戳对应的日期最大时间戳:
-  * getMaxTimeStampByTimeStamp(timeStamp)
+  * **getMaxTimeStampByTimeStamp**(timeStamp)
   * 
   * 获取本周最小时间戳:
-  * getCurrentWeekMinTimeStamp()
+  * **getCurrentWeekMinTimeStamp**()
   * 
   * 获取本周最大时间戳:
-  * getCurrentWeekMaxTimeStamp();
+  * **getCurrentWeekMaxTimeStamp**()
   * 
   * 获取指定时间戳的周的最小时间戳:
-  * getWeekMinTimeStampByTimeStamp(timeStamp)
+  * **getWeekMinTimeStampByTimeStamp**(timeStamp)
   * 
   * 获取指定时间戳的周的最大时间戳:
-  * getWeekMaxTimeStampByTimeStamp(timeStamp)
+  * **getWeekMaxTimeStampByTimeStamp**(timeStamp)
   * 
   * 获取本月最小时间戳:
-  * getCurrentMonthMinTimeStamp()
+  * **getCurrentMonthMinTimeStamp**()
   * 
   * 获取本月最大的时间戳:
-  * getCurrentMonthMaxTimeStamp()
+  * **getCurrentMonthMaxTimeStamp**()
   * 
   * 获取指定时间戳对应月份的最小时间戳:
-  * getMonthMinTimeStampByTimeStamp(timeStamp)
+  * **getMonthMinTimeStampByTimeStamp**(timeStamp)
   * 
   * 获取指定时间戳对应月份的最大时间戳:
-  * getMonthMaxTimeStampByTimeStamp(timeStamp)
+  * **getMonthMaxTimeStampByTimeStamp**(timeStamp)
   * 
   * 通过一个数字类型的毫秒数,转换成X小时Y分Z秒格式:
-  * getCNTimeByTimeStamp(mss)
+  * **getCNTimeByTimeStamp**(mss)
   * 
   * 通过时间戳获取该时间戳是星期几的数字:和系统的Date.getDay()不同点在于,如果周日系统返回0,该函数返回7
-  * getWeekDayByTimeStamp(timeStamp)
+  * **getWeekDayByTimeStamp**(timeStamp)
   * 
   * 通过时间戳获取该时间戳是中文的星期几:
-  * getCNWeekDayByTimeStamp(timeStamp)
+  * **getCNWeekDayByTimeStamp**(timeStamp)
   * 
   *在旧的时间戳上添加天数,从而获取新的时间戳:
-  * getNewTimeStampByAddDay(timeStamp, addDayCount)
+  * **getNewTimeStampByAddDay**(timeStamp, addDayCount)
   * 
   * 获取当前时间在今年的第几个星期:
-  * getCurrentDateWeekCountInYear()
+  * **getCurrentDateWeekCountInYear**()
   * 
   * 获取当前时间在今年的第几个月:
-  * getCurrentDateMonthCountInYear()
+  * **getCurrentDateMonthCountInYear**()
   * 
   * 获取当前时间在今年的第几个月(中文):
-  * getCurrentDateMonthCNNameInYear()
+  * **getCurrentDateMonthCNNameInYear**()
   * 
   * 获取指定时间戳的月份名(中文):
-  * getMonthCNNameInYearByTimeStamp(timeStamp)
+  * **getMonthCNNameInYearByTimeStamp**(timeStamp)
   * 
   * 获取指定时间戳是年份的第几个星期:
-  * getWeekCountInYearByTimeStamp(timeStamp)
+  * **getWeekCountInYearByTimeStamp**(timeStamp)
   * 
   * 获取指定时间戳是年份的第几月:
-  * getMonthCountInYearByTimeStamp(timeStamp)
+  * **getMonthCountInYearByTimeStamp**(timeStamp)
   * 
   * 判断两个时间戳是否是同一周:
-  * timeStampIsSameWeek(timeStamp1, timeStamp2)
+  * **timeStampIsSameWeek**(timeStamp1, timeStamp2)
   * 
   * 判断两个时间戳是否是同一月:
-  * timeStampIsSameMonth(timeStamp1, timeStamp2)
+  * **timeStampIsSameMonth**(timeStamp1, timeStamp2)
   * 
   * 
   ***********************************************************************************************/
