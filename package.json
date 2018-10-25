@@ -1,0 +1,14 @@
+{
+  "name": "datehelperjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "DateHelper.js",
+  "scripts": {
+    "test": "mocha Test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0"
+  }
+}
