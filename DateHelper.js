@@ -125,7 +125,7 @@ class DateHelper {
   //只有YYYY-MM-DD HH-mm
   //如果时间戳转换后的时间和当前时间是同一年,则省略年份
   getYYYYMMDDHHmmDateByTimeStamp(timeStamp) {
-    return this.buildYYYYMMDDHHmmDateBySplitSign({timeStamp})
+    return this.buildYYYYMMDDHHmmDateBySplitSign({ timeStamp })
   }
 
 
@@ -422,9 +422,9 @@ class DateHelper {
     let M = (date.getMonth() + 1 < 10 ? ('0' + (date.getMonth() + 1) + monthSign) : (date.getMonth() + 1) + monthSign);
     let D = date.getDate() < 10 ? '0' + date.getDate() + daySign : date.getDate() + daySign;
     let h = date.getHours() < 10 ? '0' + date.getHours() + hourSign : date.getHours() + hourSign;
-    let m = date.getMinutes() < 10 ? '0' + date.getMinutes() + minuteSign : date.getMinutes() + minuteSign;
+    let m = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
     let s = date.getSeconds() < 10 ? '0' + date.getSeconds() + secondSign : date.getSeconds() + secondSign;
-    if (date.getFullYear() == new Date(Date.now()).getFullYear) {
+    if (date.getFullYear() == new Date(Date.now()).getFullYear()) {
       //相同的年
       return M + D + h + m;
     }
