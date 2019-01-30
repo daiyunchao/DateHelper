@@ -27,7 +27,11 @@ mocha Test.js
   * 
   * 通过时间戳获取yyyy-MM-dd HH:mm:ss格式的日期:
   * **getDateByTimeStamp**(timeStamp)
-  * 
+  *
+  * 获取只有YYYY-MM-DD HH-mm
+  * 如果时间戳转换后的时间和当前时间是同一年,则省略年份
+  * **getYYYYMMDDHHmmDateByTimeStamp(timeStamp)
+  *
   * 通过时间戳获取yyyy年MM月dd HH:mm:ss格式的日期:
   * **getCNDateByTimeStamp**(timeStamp)
   * 
