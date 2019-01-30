@@ -122,6 +122,12 @@ class DateHelper {
     return this.buildDateBySplitSign({ timeStamp });
   }
 
+  //只有YYYY-MM-DD HH-mm
+  //如果时间戳转换后的时间和当前时间是同一年,则省略年份
+  getYYYYMMDDHHmmDateByTimeStamp(timeStamp) {
+    return this.buildYYYYMMDDHHmmDateBySplitSign({timeStamp})
+  }
+
 
   //根据时间戳转换成时间格式(2018年10月24日 16:28:35)
   //params: timeStamp number/string 需要转换的时间戳
@@ -393,6 +399,37 @@ class DateHelper {
     let s = date.getSeconds() < 10 ? '0' + date.getSeconds() + secondSign : date.getSeconds() + secondSign;
     return Y + M + D + h + m + s;
   }
+
+  //转换通用方法
+  //可调用此方法进行扩展
+  buildYYYYMMDDHHmmDateBySplitSign({
+    timeStamp,
+    yearSign = "-",
+    monthSign = "-",
+    daySign = " ",
+    hourSign = ":",
+    minuteSign = ":",
+    secondSign = ""
+  }) {
+    if (timeStamp) {
+      timeStamp = Number(timeStamp);
+    }
+    if (Object.is(timeStamp, NaN)) {
+      throw new Error("timeStamp 不能转换成时间格式,请检测输入参数");
+    }
+    let date = new Date(timeStamp);
+    let Y = date.getFullYear() + yearSign;
+    let M = (date.getMonth() + 1 < 10 ? ('0' + (date.getMonth() + 1) + monthSign) : (date.getMonth() + 1) + monthSign);
+    let D = date.getDate() < 10 ? '0' + date.getDate() + daySign : date.getDate() + daySign;
+    let h = date.getHours() < 10 ? '0' + date.getHours() + hourSign : date.getHours() + hourSign;
+    let m = date.getMinutes() < 10 ? '0' + date.getMinutes() + minuteSign : date.getMinutes() + minuteSign;
+    let s = date.getSeconds() < 10 ? '0' + date.getSeconds() + secondSign : date.getSeconds() + secondSign;
+    if (date.getFullYear() == new Date(Date.now()).getFullYear) {
+      //相同的年
+      return M + D + h + m;
+    }
+    return Y + M + D + h + m;
+  }
 }
 
-module.exports = new DateHelper();
+export default new DateHelper();
